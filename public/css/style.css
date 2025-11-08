@@ -1,0 +1,11 @@
+/* Set a height for the map */
+#map {
+  height: 90vh; /* 90% of the viewport height */
+  border-radius: 0.375rem; /* Bootstrap's default border-radius */
+}
+
+/* Make the list scrollable */
+#location-list-container {
+  height: 90vh;
+  overflow-y: auto;
+}

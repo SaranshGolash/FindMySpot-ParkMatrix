@@ -1,0 +1,49 @@
+<%- include('partials/header') %>
+
+<div class="row justify-content-center mb-3" id="vehicle-form-container">
+  <div class="col-md-6">
+    <div class="card shadow-sm">
+      <div class="card-body">
+        <h5 class="card-title">Find Parking</h5>
+        <p class="card-text">Enter your vehicle details to find spots.</p>
+
+        <form id="vehicle-form">
+          <div class="mb-3">
+            <label for="license-plate" class="form-label">License Plate</label>
+            <input
+              type="text"
+              class="form-control"
+              id="license-plate"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <label for="vehicle-type" class="form-label">Vehicle Type</label>
+            <select class="form-select" id="vehicle-type" required>
+              <option value="" selected disabled>Select type...</option>
+              <option value="car">Car</option>
+              <option value="bike">Bike</option>
+              <option value="truck">Truck</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary">Find Spots</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row" id="main-content" style="display: none">
+  <div class="col-md-4">
+    <h3>Available Locations</h3>
+    <div id="location-list-container">
+      <div class="list-group" id="location-list"></div>
+    </div>
+  </div>
+
+  <div class="col-md-8">
+    <div id="map"></div>
+  </div>
+</div>
+
+<%- include('partials/footer') %>
